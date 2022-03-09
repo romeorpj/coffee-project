@@ -3,15 +3,28 @@
 Congratulations! You have landed your first development job! You have inherited
 a project from Fancy Coffee Company&copy;, and they want you to make
 improvements to it.
+![Cofee Project Demo](demo.gif)
 
-## Setup
+## TODO LIST
 
-1. Create a Github organization and add your teammate.
-1. Fork this repository (Click on the "Fork" button on the top right of this
-   page) and select the new organization as a destination.
-1. Clone the forked repository from your organization.
-1. Open up the HTML file and check out the existing application.
-1. Read through the code and understand the existing code structure before you start to build the features.
+- Display coffee name, and the type of roast.
+- Sort coffee in ascending order by their ids
+- --auto generate ids for newly added items
+- Add a search input box
+- -- display onscreen only the coffees that match the provided search term
+- -- Make your name search case insensitive
+- -- Add functionality to update the displayed coffee as the user types into the
+  search box, or as soon as they select an option from the select.
+- Add an option to select all roasts for roast type
+- -- look into a dropdown or checkbox option
+- Allow the user to add new coffees to the page 
+- -- Create another form on the page that has an input for the coffee name, and
+     a select to choose the coffee roast. When the form is submitted, the new
+     coffee should appear on the page. (*Note that any new coffees you add will
+     be lost when you refresh the page, for an extra challenge, research
+     how `localStorage` works and see if you can find a way to persist the data*)
+- 
+
 
 ## TODO
 
@@ -58,4 +71,4 @@ improvements to it.
 Here is an example demonstrating the above functionality. Your application might
 look different, but should have the same features.
 
-![Cofee Project Demo](demo.gif)
+

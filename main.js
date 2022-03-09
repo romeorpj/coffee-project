@@ -13,6 +13,8 @@ function renderCoffee(coffee) {
 function renderCoffees(coffees) {
     var html = '';
     for(var i = coffees.length - 1; i >= 0; i--) {
+        console.log(coffees[i])
+        // console.log(coffees[0])
         html += renderCoffee(coffees[i]);
     }
     return html;
