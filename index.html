@@ -55,14 +55,17 @@
 <body>
 
     <header>
-        <nav class="navbar navbar-expand-md navbar-light bg-light">
+        <nav class="navbar navbar-expand-md navbar-dark ">
             <div class="container">
-                <a class="navbar-brand" href="#">Navbar</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <img src="favicon_io/favicon-32x32.png" alt="coffee project logo" class="navbar-brand">
+                <a class="navbar-brand" href="#">Coffee Search.io</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <ul class="navbar-nav  mb-2 mb-lg-0 text-center d-flex justify-content-end">
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="#">Home</a>
                         </li>
@@ -75,28 +78,80 @@
                         <li class="nav-item">
                             <a class="nav-link" href="#">Apps</a>
                         </li>
-<!--                        <li class="nav-item dropdown">-->
-<!--                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">-->
-<!--                                Dropdown-->
-<!--                            </a>-->
-<!--                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">-->
-<!--                                <li><a class="dropdown-item" href="#">Action</a></li>-->
-<!--                                <li><a class="dropdown-item" href="#">Another action</a></li>-->
-<!--                                <li><hr class="dropdown-divider"></li>-->
-<!--                                <li><a class="dropdown-item" href="#">Something else here</a></li>-->
-<!--                            </ul>-->
-<!--                        </li>-->
-
                     </ul>
-                    <form class="d-flex">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success" type="submit">Search</button>
-                    </form>
                 </div>
             </div>
         </nav>
     </header>
+<!--    END HEADER / NAV-->
     <div class="container">
+        <main class="main-content">
+            <div class="lead">
+                <h1>The Searchiest Coffee Search On The Internet</h1>
+                <h2>Don't @ Me!</h2>
+
+                <!--               AUTO SEARCH YOUR ROAST INPUT-->
+                <div class="coffee-interactions">
+
+                    <form>
+                        <!--                CHOOSE YOUR ROAST RADIO GROUP-->
+                        <div class="choose-your-roast">
+                            <p id="roastRadioButtons" class="form-text mb-0">Select coffee by roast type.</p>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                                       value="option1">
+                                <label class="form-check-label" for="inlineRadio1">Light</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                                       value="option2">
+                                <label class="form-check-label" for="inlineRadio2">Medium</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3"
+                                       value="option3" >
+                                <label class="form-check-label" for="inlineRadio3">Dark</label>
+                            </div>
+                        </div>
+                        <!--                END CHOOSE YOUR ROAST RADIO GROUP-->
+                        <div class="mb-3">
+                            <label for="coffee-input-search" class="form-text mb-0" id="search-roast-input">Search Coffee
+                                Name</label>
+                           <input type="search" class="form-control" id="coffee-input-search"
+                                   aria-describedby="coffeeSearch">
+                        </div>
+                    </form>
+                </div>
+                <!--                END AUTO SEARCH YOUR ROAST INPUT-->
+<!--                ENTER NEW COFFEE DATA-->
+                <p id="add-coffee-group" class="form-text mb-0">Add your own coffee.</p>
+                <div class="input-group mb-3">
+                    <button class="btn btn-warning dropdown-toggle" type="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">Select Roast</button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Light</a></li>
+                        <li><a class="dropdown-item" href="#">Medium</a></li>
+                        <li><a class="dropdown-item" href="#">Dark</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item text-center squiddy" href="#">🐙</a></li>
+                    </ul>
+                    <input type="text" class="form-control" aria-label="The amazing coffee adder"
+                           placeholder="Enter coffee name">
+                </div>
+<!--                END ENTER NEW COFFEE DATA-->
+            </div>
+        </main>
+<!--            END OF THE MAIN INPUT DIV-->
+            <section class="coffee-output">
+<div class="coffee-output-wrapper">
+<!--    <div class="coffee-item-output-div">-->
+<!--        <p>lfkfkafadk aslfhaklsjhkj</p>-->
+<!--        <p class="form-text my-0 sub-roast-styles">Light</p>-->
+<!--    </div>-->
+
+
 </div>
+            </section>
+    </div>
 </body>
 </html>
