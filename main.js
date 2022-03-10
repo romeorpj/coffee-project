@@ -21,6 +21,7 @@ let coffees = [
     {id: 13, name: 'Italian', roast: 'dark'},
     {id: 14, name: 'French', roast: 'dark'},
 ];
+// console.log(coffees);
 
 //REUSABLE FUNCTION THAT DISPLAYS COFFEES ONSCREEN
 function displayCoffee(coffeesParam) {
@@ -56,4 +57,73 @@ coffeeInputSearch.addEventListener("keyup",(e)=> {
     displayCoffee(filteredCoffees);
 })}
 
-// ***** SEARCH FOR COFFEE BY TYPING IN NAME INTO INPUT *****
+//*****ADD COFFEE TO COFFEES ARRAY, SET TO LOCAL STORAGE FOR PERSISTENCE
+// let newLocalArray = [];
+    let newLocalObject = {};
+
+
+function addYourOwnCoffee(){
+//        Capturing dropdown selection
+
+let addCoffeeRoastsDropdown = Array.from(document.querySelectorAll(".add-coffee-dropdown li a"));
+    for(let i = 0; i < addCoffeeRoastsDropdown.length;i++){
+     addCoffeeRoastsDropdown[i].addEventListener("click",function() {
+            // console.log(addCoffeeRoastsDropdown[i])
+            let selectRoastFromDropdown = addCoffeeRoastsDropdown[i].textContent.toLowerCase();
+            //generate random id number up to 99
+            newLocalObject.id = Math.floor(Math.random()*99) + 1;
+            newLocalObject.roast = selectRoastFromDropdown;
+            // addCoffeeRoastsDropdown[i].textContent = newLocalObject.roast;
+
+        } ) }
+
+}
+addYourOwnCoffee();
+
+
+
+function submitCoffeeObject(){
+    let addCoffeeInput = document.querySelector(".add-coffee-input");
+    let addCoffeeButton = document.querySelector(".add-coffee-button");
+    addCoffeeButton.addEventListener("click",()=>{
+        // console.log(addCoffeeFunction())
+        newLocalObject.name = addCoffeeInput.value;
+        coffees += newLocalObject;
+        console.log(newLocalObject)
+
+        // console.log(newLocalObject)
+        addCoffeeInput.value = "";
+
+let coffeeStorageObject=localStorage.getItem("coffeeStorageObject");
+        if(localStorage.getItem("coffeeStorageObject")){
+            let getCoffeeFromStorage = JSON.parse(localStorage.getItem(coffeeStorageObject));
+            coffees += getCoffeeFromStorage
+            console.log(coffees);
+        }else{
+            localStorage.setItem("coffeeStorageObject",JSON.stringify(newLocalObject));
+
+        }
+    })
+
+}
+
+submitCoffeeObject();
+
+// check if items are in storage
+//if they are, get them out, parse them, push them to the coffees array
+// if nothing is in storage, stringify the object and add it to storage.
+
+
+// function checkForStorage(readyToSetObject){
+//     if(!localStorage.getItem("newCoffeeObject")){
+//         localStorage.setItem("newCoffeeObject",JSON.stringify(readyToSetObject));
+//     }else{
+//         let getCoffeeFromStorage = JSON.parse(localStorage.getItem(readyToSetObject));
+//         coffees.push(getCoffeeFromStorage)
+//         console.log(coffees)
+//     }
+// }
+
+// function RetrieveObjectFromStorage(){
+//     let getCoffeeFromStorage = JSON.parse(localStorage.getItem())
+// }
