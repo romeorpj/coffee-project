@@ -148,12 +148,18 @@ ul{
 .coffee-item-output-div{
     /*border: 2px solid lime;*/
     /*flex-basis: 45%;*/
+    /*transition: all 300ms ease-in-out;*/
     margin-bottom: 25px;
     padding: 10px 0 10px 15px;
     /*gap: 5px;*/
 
     /*padding: 10px;*/
 }
+/*.coffee-item-output-div p{*/
+/*    */
+/*    transition: all 300ms ease-in-out;*/
+
+/*}*/
 .coffee-output-wrapper p{
     /*border: 2px solid lime;*/
     /*flex-basis: 50%;*/
@@ -176,8 +182,11 @@ ul{
     margin: 0 auto;
 }
 h1{
+    font-size: 4.5rem;
+    font-weight: 600;
     text-align: center;
     margin-bottom: 2.5rem;
+    text-transform: uppercase;
 }
 #h1-accent{
     color: var(--orange);
@@ -186,6 +195,10 @@ h1{
 .btn-orange{
     background: var(--orange);
     border-color: var(--orange);
+}
+
+.add-coffee-dropdown{
+    margin-bottom: 2rem;
 }
 @media screen and (min-width:992px) {
 
