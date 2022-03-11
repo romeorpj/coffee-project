@@ -3,6 +3,7 @@
 let allRoastsRadioBtns = Array.from(document.querySelectorAll(".all-roasts"));
 let coffeeOutputWrapper = document.querySelector(".coffee-output-wrapper");
 let coffeeInputSearch = document.querySelector("#coffee-input-search");
+
 // console.log(allRoastsRadioBtns)
 
 let coffees= [
@@ -21,6 +22,11 @@ let coffees= [
     {id: 13, name: 'Italian', roast: 'dark'},
     {id: 14, name: 'French', roast: 'dark'},
 ];
+
+
+// console.log(coffees)
+// console.log(coffees.push({id: 15, name: 'jjjjrench', roast: 'dark'}))
+// console.log(coffees)
 // let localStorageCoffeesArray = localStorage.getItem("coffees")
 // if(localStorageCoffeesArray === null){
 //     coffees = [
@@ -102,25 +108,22 @@ coffeeInputSearch.addEventListener("keyup",(e)=> {
 // let newLocalArray = [];
     let newLocalObject = {};
 
+let selectRoastDropdown = document.querySelector("#select-roast-dropdown");
+let addCoffeeInput = document.querySelector(".add-coffee-input");
+let addCoffeeButton = document.querySelector(".add-coffee-button");
 
-function addYourOwnCoffee(){
-//        Capturing dropdown selection
-let addCoffeeRoastsDropdown = Array.from(document.querySelectorAll(".add-coffee-dropdown li a"));
-    for(let i = 0; i < addCoffeeRoastsDropdown.length;i++){
-     addCoffeeRoastsDropdown[i].addEventListener("click",function() {
-            // console.log(addCoffeeRoastsDropdown[i])
-            let selectRoastFromDropdown = addCoffeeRoastsDropdown[i].textContent.toLowerCase();
-         console.log(selectRoastFromDropdown)
-            //generate random id number up to 99
-            newLocalObject.id = Math.floor(Math.random()*99) + 1;
-            newLocalObject.roast = selectRoastFromDropdown;
-         console.log(newLocalObject);
-            // addCoffeeRoastsDropdown[i].textContent = newLocalObject.roast;
-
-        } ) }
-
+addCoffeeButton.addEventListener('click', addYourOwnCoffee);
+function addYourOwnCoffee(e){
+    e.preventDefault();
+    let newCoffeeObj = {
+        id: coffees.length + 1,
+        name: addCoffeeInput.value,
+        roast: selectRoastDropdown.value
+    }
+    coffees.push(newCoffeeObj);
+    console.log(coffees);
 }
-addYourOwnCoffee();
+// addYourOwnCoffee(e);
 
 
 

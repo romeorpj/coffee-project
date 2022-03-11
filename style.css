@@ -174,15 +174,23 @@ h1 {
     color: var(--orange);
     text-decoration: underline;
 }
+input[type="radio"] {
+    accent-color: var(--orange) !important;
+}
 .btn-orange{
     background: var(--orange);
     border-color: var(--orange);
+    width: 20% !important;
 }
 
 .add-coffee-dropdown {
     margin-bottom: 2rem;
 }
-
+option{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .footer-image {
     display: none;
     transition: all 350ms ease-in-out;
@@ -190,7 +198,7 @@ h1 {
 /*footer{*/
 /*    */
 /*}*/
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 768px) {
 
     .footer-image {
         display: block;

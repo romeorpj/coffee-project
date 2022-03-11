@@ -97,15 +97,30 @@
 <!--                ENTER NEW COFFEE DATA-->
                 <p id="add-coffee-group" class="form-text mb-0">Add your own coffee.</p>
                 <div class="input-group mb-4 add-coffee-dropdown">
-                    <button class="btn btn-warning dropdown-toggle btn-orange" type="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">Select Roast</button>
-                    <ul class="dropdown-menu text-center">
-                        <li><a class="dropdown-item" href="#">Light</a></li>
-                        <li><a class="dropdown-item" href="#">Medium</a></li>
-                        <li><a class="dropdown-item" href="#">Dark</a></li>
-                        <li><hr class="dropdown-divider"></li>
-                        <li><h3 class="dropdown-item text-center squiddy">🐙</h3></li>
-                    </ul>
+
+<!--                    <div class="row">-->
+<!--                        <div class="col-sm-3">-->
+                    <select class=" btn-orange show-tick" data-width="auto" id="select-roast-dropdown"
+                            aria-label="Default select example"
+                            style="width:auto;">
+                        <option value="light" selected>Light</option>
+                        <option value="medium">Medium</option>
+                        <option value="dark">Dark</option>
+                    </select>
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <button class="btn btn-warning dropdown-toggle btn-orange" type="button"-->
+<!--                            data-bs-toggle="dropdown" aria-expanded="false">Select Roast</button>-->
+<!--                    <ul class="dropdown-menu text-center">-->
+<!--                        <li><a class="dropdown-item" href="#">Light</a></li>-->
+<!--                        <li><a class="dropdown-item" href="#">Medium</a></li>-->
+<!--                        <li><a class="dropdown-item" href="#">Dark</a></li>-->
+<!--                        <li><hr class="dropdown-divider"></li>-->
+<!--                        <li><h3 class="dropdown-item text-center squiddy">🐙</h3></li>-->
+<!--                    </ul>-->
+
+
+
                     <input type="text" class="form-control add-coffee-input" aria-label="The amazing coffee adder"
                            placeholder="Enter coffee name">
                     <button class="btn add-coffee-button btn-warning btn-orange" type="button" id="button-addon2">Submit</button>
